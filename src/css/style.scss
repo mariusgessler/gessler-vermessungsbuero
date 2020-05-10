@@ -1,4 +1,9 @@
 @import '~browser-reset/reset.css';
 @import 'utilities', 'variables', 'grid', 'colors', 'typography';
 
+@import 'components/address';
 @import 'components/topbar';
+@import 'components/hero';
+@import 'components/intro';
+@import 'components/leistungen';
+@import 'components/footer';
