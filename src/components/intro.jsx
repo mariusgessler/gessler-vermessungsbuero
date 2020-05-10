@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import dompurify from 'dompurify';
 import Address from './address';
 
 const Intro = () => {
@@ -20,14 +19,14 @@ const Intro = () => {
 
 
   const { html } = data.allContentfulHeroIntroLongTextNode.edges[0].node.childMarkdownRemark;
-  const sanitizer = dompurify.sanitize;
+
 
   return (
     <div className="section section--intro">
       <div className="row">
         <div className="col-xs-12 col-sm-6">
           <div className="intro__container">
-            <div className="text__wrapper" dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
+            <div className="text__wrapper" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
         <div className="col-xs-12 col-sm-3">

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import dompurify from 'dompurify';
 
 const Impressum = () => {
   const { allContentfulImpressumImpressumRichTextNode } = useStaticQuery((graphql`
@@ -15,13 +14,12 @@ const Impressum = () => {
   }`));
 
   const { html } = allContentfulImpressumImpressumRichTextNode.nodes[0].childContentfulRichText;
-  const sanitizer = dompurify.sanitize;
 
   return (
     <div className="container">
       <div className="container-fluid">
         <div className="section section--impressum">
-          <div dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
     </div>
