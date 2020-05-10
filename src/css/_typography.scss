@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto:300,400&display=swap');
 
-$font-primary: 'Roboto', sans-serif;
-$font-secondary: 'Open-Sans', sans-serif;
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
 
 %font-primary {
   font-family: $font-primary;
@@ -9,4 +9,36 @@ $font-secondary: 'Open-Sans', sans-serif;
 
 %font-secondary {
   font-family: $font-secondary;
+}
+
+h1,h2,h3,h4 {
+  font-family: $font-primary;
+  letter-spacing: -.86px;
+  line-height: 38px;
+}
+
+h2 {
+  font-size: em(18px);
+  font-weight: 300;
+
+  @include breakpoint(lg) {
+    font-size: em(24px);
+  } 
+}
+
+p, li, a {
+  font-family: $font-secondary;
+  text-decoration: none;
+  color: inherit;
+  color: palette(grey, dark)
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+a {
+  font-weight: 400;
 }
