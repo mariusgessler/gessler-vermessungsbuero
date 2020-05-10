@@ -1,0 +1,24 @@
+.section--hero {
+  position: relative;
+  
+ &:before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 75%;
+    background-color: palette(white, off);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    box-shadow: $box-shadow-bottom;
+  }
+
+  .hero__image {
+    box-shadow: $box-shadow-strong;
+
+    img {
+      border-radius: 4px;
+    }
+  }
+}

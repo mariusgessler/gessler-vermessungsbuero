@@ -1,8 +1,21 @@
 .section--topbar {
-  border-bottom: 5px solid palette(grey);
+  position: relative;
+  border-bottom: .2px solid palette(grey, light);
+  margin-bottom: 45px;
+
+   &::before {
+     position: absolute;
+     content: '';
+     width: 100vw;
+     height: calc(100% + 60px) ;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: palette(white, off);
+    z-index: -1;
+   } 
 
   .logo__wrapper{
-    max-width: 300px;
+    max-width: 250px;
     padding: 25px 0;
     margin: 0 auto;
     

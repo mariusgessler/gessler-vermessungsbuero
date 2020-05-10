@@ -25,11 +25,17 @@ const Hero = () => {
 
   return (
     <div className="section section--hero">
-      <div className="hero__image">
-        <img src={url} alt="Hero" />
-      </div>
-      <div className="hero__title">
-        <h2>{title}</h2>
+      <div className="row between-md">
+        <div className="col-xs-12 col-sm-6 col-md-4">
+          <div className="hero__title">
+            <h2>{title}</h2>
+          </div>
+        </div>
+        <div className="col col-xs-12 col-sm-6">
+          <div className="hero__image">
+            <img src={url} alt="Hero" />
+          </div>
+        </div>
       </div>
     </div>
   );
