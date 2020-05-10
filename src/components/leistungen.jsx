@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Checkmark from '../../static/checkmark.svg';
 
 const Leistungen = () => {
   const { allContentfulUnsereLeistungen } = useStaticQuery((graphql`
@@ -23,34 +24,46 @@ const Leistungen = () => {
 
   return (
     <div className="section section--leistungen">
-      <h1>{node.title}</h1>
-      <div className="leistungen__single">
-        <div className="row">
-          <div className="col-xs-12 col-sm-6">
-            <h2>{node.leistungTitle1}</h2>
-          </div>
-          <div className="col-xs-12 col-sm-6">
-            <p>{node.leistungen1.join(', ')}</p>
-          </div>
-        </div>
-      </div>
-      <div className="leistungen__single">
-        <div className="row">
-          <div className="col-xs-12 col-sm-6">
-            <h2>{node.leistungTitle2}</h2>
-          </div>
-          <div className="col-xs-12 col-sm-6">
-            <p>{node.leistungen2.join(', ')}</p>
+      <h2>{node.title}</h2>
+      <hr />
+      <div className="row between-sm">
+        <div className="col-xs-12 col-sm-4">
+          <div className="leistungen__single">
+            <h3>{node.leistungTitle1}</h3>
+            <ul className="leistungen__list">
+              {node.leistungen1.map((item) => (
+                <li className="leistungen__item">
+                  <Checkmark />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
-      <div className="leistungen__single">
-        <div className="row">
-          <div className="col-xs-12 col-sm-6">
-            <h2>{node.leistungTitle3}</h2>
+        <div className="col-xs-12 col-sm-4">
+          <div className="leistungen__single">
+            <h3>{node.leistungTitle2}</h3>
+            <ul className="leistungen__list">
+              {node.leistungen2.map((item) => (
+                <li className="leistungen__item">
+                  <Checkmark />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="col-xs-12 col-sm-6">
-            <p>{node.leistungen3.join(', ')}</p>
+        </div>
+        <div className="col-xs-12 col-sm-4">
+          <div className="leistungen__single">
+            <h3>{node.leistungTitle3}</h3>
+            <ul className="leistungen__list">
+              {node.leistungen3.map((item) => (
+                <li className="leistungen__item">
+                  <Checkmark />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

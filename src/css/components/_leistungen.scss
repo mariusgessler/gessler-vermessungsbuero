@@ -1,0 +1,72 @@
+.section--leistungen {
+  position: relative;
+  padding-top: 80px;
+  margin: 80px 0;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: calc(100% + 80px);
+    background-color: palette(blue, light);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    box-shadow: $box-shadow-bottom;
+    border-top: 1px solid palette(grey, base);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: em(16px);
+    font-weight: 400;
+  }
+
+  .leistungen__single {
+    background-color: white;
+    margin: 35px 0;
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    box-shadow: $box-shadow-light;
+
+    @include breakpoint(md) {
+      height: 425px;
+    }
+
+    .leistungen__item {
+      padding: 15px 0;
+      svg {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        margin-right: 15px;
+      }
+
+      span {
+        position: absolute;
+
+        @include breakpoint(sm) {
+          max-width: 160px;
+          word-wrap:break-word;
+
+        }
+
+        @include breakpoint(md) {
+          max-width: 100%;
+        }
+       }
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background-image: linear-gradient(270deg,rgba(0,45,60,0),#002d3c 51%,rgba(0,45,60,0));
+  }
+}
