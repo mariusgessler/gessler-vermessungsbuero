@@ -7,12 +7,10 @@ const Address = () => {
       allContentfulAdresse {
         edges {
           node {
-            email
-            phone
+            name
+            name2
             street
             zipCity
-            name2
-            name
           }
         }
       }
@@ -27,6 +25,12 @@ const Address = () => {
           {item}
         </li>
       ))}
+      <li className="address__item">
+        <a href="mailto: helmut.gessler@t-online.de">helmut.gessler@t-online.de</a>
+      </li>
+      <li className="address__item">
+        <a href="tel: +497664402710">07664 - 40 27 10</a>
+      </li>
     </ul>
   );
 };
