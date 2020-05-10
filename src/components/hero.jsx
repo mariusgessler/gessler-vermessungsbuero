@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Hero = () => {
   const { allContentfulHero } = useStaticQuery((graphql`
@@ -8,10 +9,8 @@ const Hero = () => {
         edges {
           node {
             heroImage {
-              file {
-                url
-                fileName
-                contentType
+              sizes(maxWidth: 568, quality: 100) {
+                ...GatsbyContentfulSizes
               }
             }
             heroTitle
@@ -20,7 +19,7 @@ const Hero = () => {
       }
     }`));
 
-  const { url } = allContentfulHero.edges[0].node.heroImage.file;
+  const { sizes } = allContentfulHero.edges[0].node.heroImage;
   const title = allContentfulHero.edges[0].node.heroTitle;
 
   return (
@@ -33,7 +32,7 @@ const Hero = () => {
         </div>
         <div className="col col-xs-12 col-sm-6">
           <div className="hero__image">
-            <img src={url} alt="Hero" />
+            <Img sizes={sizes} alt="Hero" />
           </div>
         </div>
       </div>
