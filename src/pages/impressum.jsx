@@ -18,9 +18,14 @@ const Impressum = () => {
   const sanitizer = dompurify.sanitize;
 
   return (
-    <div className="section section--impressum">
-      <div dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
+    <div className="container">
+      <div className="container-fluid">
+        <div className="section section--impressum">
+          <div dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
+        </div>
+      </div>
     </div>
+
   );
 };
 
