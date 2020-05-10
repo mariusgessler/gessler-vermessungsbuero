@@ -1,0 +1,15 @@
+.section--footer {
+  background-color: palette(grey, light);
+  padding: 65px 0;
+
+  .link {
+    margin-top: 25px;
+
+    @include breakpoint(sm) {
+      margin-top: 0;
+    }
+  }
+  .link--impressum {
+    text-transform: uppercase;
+  }
+}
