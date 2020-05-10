@@ -1,21 +1,24 @@
-import React from "react";
+import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({ title, description, image, article }) => {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+const SEO = ({
+  title, description, image, article, 
+}) => {
+  const { pathname } = useLocation();
+  // eslint-disable-next-line no-use-before-define
+  const { site } = useStaticQuery(query);
   const {
     defaultTitle,
     titleTemplate,
     defaultDescription,
     siteUrl,
     defaultImage,
-  } = site.siteMetadata
+  } = site.siteMetadata;
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
@@ -59,4 +62,4 @@ const query = graphql`
         defaultImage: image
       }
     }
-  }`
+  }`;
