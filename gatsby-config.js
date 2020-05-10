@@ -1,11 +1,13 @@
+const path = require('path');
+// eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-}
+};
 
 // if you want to use the preview API please define
 // CONTENTFUL_HOST in your environment config
@@ -27,7 +29,9 @@ module.exports = {
   siteMetadata: {
     title: 'Gessler Vermessungsbüro',
     description: 'Ingenieurbüro für Vermessung Helmut Gessler',
-    author: 'Marius Gessler',
+    author: 'Helmut Gessler',
+    url: 'https://www.gessler-vermessung.de',
+    image: '/hero2.jpg',
   },
   pathPrefix: '/gessler-vermessungsbuero',
   plugins: [
@@ -40,6 +44,21 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'static'),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /static/,
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',
