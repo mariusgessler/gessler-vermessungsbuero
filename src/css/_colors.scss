@@ -1,8 +1,18 @@
 $palettes: (
   white: (
-    base: #FFFFFF
+    base: #FFFFFF,
+    off: #F4F4F4
   ),
   black: (
     base: #000000
+  ),
+  grey: (
+    base: #CECECE,
+    dark: rgb(58, 57, 57),
+    light: rgba(248, 248, 246, 0.178)
+  ),
+  blue: (
+    base: #05119F,
+    light: #F0F5F6
   )
 );
