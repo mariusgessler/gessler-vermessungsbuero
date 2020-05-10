@@ -1,0 +1,13 @@
+.section--topbar {
+  border-bottom: 5px solid palette(grey);
+
+  .logo__wrapper{
+    max-width: 300px;
+    padding: 25px 0;
+    margin: 0 auto;
+    
+    @include breakpoint(sm) {
+      margin: 0;
+    }
+  }
+}

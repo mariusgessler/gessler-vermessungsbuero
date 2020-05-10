@@ -3,7 +3,11 @@ import Logo from './nanos/logo';
 
 const Topbar = () => (
   <div className="section section--topbar">
-    <Logo />
+    <div className="container">
+      <div className="container-fluid">
+        <Logo />
+      </div>
+    </div>
   </div>
 );
 

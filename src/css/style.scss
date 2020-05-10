@@ -1,4 +1,4 @@
-@import 'browser-reset/reset.css';
-@import 'variables', 'grid', 'colors', 'typography';
+@import '~browser-reset/reset.css';
+@import 'utilities', 'variables', 'grid', 'colors', 'typography';
 
 @import 'components/topbar';
