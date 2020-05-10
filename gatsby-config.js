@@ -19,38 +19,39 @@ const { spaceId, accessToken } = contentfulConfig
 
 if (!spaceId || !accessToken) {
   throw new Error(
-    'Contentful spaceId and the access token need to be provided.'
-  )
+    'Contentful spaceId and the access token need to be provided.',
+  );
 }
 
 module.exports = {
   siteMetadata: {
-    title: `Gessler Vermessungsbüro`,
-    description: `Ingenieurbüro für Vermessung Helmut Gessler`,
-    author: `Marius Gessler`,
+    title: 'Gessler Vermessungsbüro',
+    description: 'Ingenieurbüro für Vermessung Helmut Gessler',
+    author: 'Marius Gessler',
   },
   pathPrefix: '/gessler-vermessungsbuero',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    `@contentful/gatsby-transformer-contentful-richtext`,
+    'gatsby-plugin-sass',
+    '@contentful/gatsby-transformer-contentful-richtext',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `gessler-vermessungsbuero`,
-        short_name: `Gessler Vermessung`,
-        start_url: `/`,
-        background_color: `#1470AF`,
-        theme_color: `#1470AF`,
-        display: `minimal-ui`,
-        icon: `static/favicon.png`, // This path is relative to the root of the site.
+        name: 'gessler-vermessungsbuero',
+        short_name: 'Gessler Vermessung',
+        start_url: '/',
+        background_color: '#1470AF',
+        theme_color: '#1470AF',
+        display: 'minimal-ui',
+        icon: 'static/favicon.png', // This path is relative to the root of the site.
       },
-    }
+    },
   ],
-}
+};
