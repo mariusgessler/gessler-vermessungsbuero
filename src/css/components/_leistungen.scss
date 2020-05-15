@@ -33,7 +33,7 @@
     border: 1px solid #e5e5e5;
     box-shadow: $box-shadow-light;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       height: 425px;
     }
 
