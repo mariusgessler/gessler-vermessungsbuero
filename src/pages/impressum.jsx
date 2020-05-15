@@ -18,7 +18,7 @@ const Impressum = () => {
   return (
     <div className="container">
       <div className="container-fluid">
-        <div className="section section--impressum">
+        <div className="section section--impressum" style={{ paddingBottom: '75px' }}>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
