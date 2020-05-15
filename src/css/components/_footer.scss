@@ -6,12 +6,17 @@
     position: relative;
     top: 30px;
     @include breakpoint(sm) {
-      top: 80px;
+      top: 130px;
       margin-top: 0;
     }
   }
   .link--impressum {
     text-transform: uppercase;
     font-size: em(14px);
+  }
+
+  .logo__wrapper {
+    width: 220px;
+    margin-bottom: 25px;
   }
 }

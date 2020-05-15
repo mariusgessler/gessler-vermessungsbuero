@@ -9,6 +9,7 @@ const Footer = () => (
       <div className="container-fluid">
         <div className="row between-sm middle-sm">
           <div className="col col-xs-12 col-sm-6">
+            <Logo />
             <Address />
           </div>
           <div className="col col-xs-12 col-sm-6 end-sm link">
