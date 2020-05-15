@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Address from './address';
+import Logo from './nanos/logo';
 
 const Intro = () => {
   const data = useStaticQuery((graphql`
@@ -31,7 +32,7 @@ const Intro = () => {
         </div>
         <div className="col-xs-12 col-sm-3">
           <div className="address__container">
-            <h2>Kontakt</h2>
+            <Logo />
             <Address />
           </div>
         </div>

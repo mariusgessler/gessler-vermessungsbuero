@@ -25,10 +25,15 @@
   }
 
   .address__container {
-    h2 {
-      font-size: em(16px);
+    margin-top: 25px;
+
+    .logo__wrapper {
+      display: none;
+      
       @include breakpoint(sm) {
-        margin-top: 0;
+        display: block;
+        width: 150px;
+        margin-bottom: 25px;
       }
     }
   }
