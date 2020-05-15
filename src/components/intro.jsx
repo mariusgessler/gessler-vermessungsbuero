@@ -31,8 +31,8 @@ const Intro = () => {
           </div>
         </div>
         <div className="col-xs-12 col-sm-3">
+          <h2>Kontakt</h2>
           <div className="address__container">
-            <Logo />
             <Address />
           </div>
         </div>
