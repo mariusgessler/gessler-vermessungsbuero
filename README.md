@@ -2,7 +2,7 @@
 
 Just a super simple landing page for my uncle's business.
 
-[Live](https://gessler-vermessung.de/)
+Take a look at the [live site](https://gessler-vermessung.de/)
  
 ## Technologies 
 
