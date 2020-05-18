@@ -22,8 +22,8 @@
   }
 
   h3 {
-    font-size: em(16px);
-    font-weight: 400;
+    font-size: em(18px);
+    font-weight: 500;
   }
 
   .leistungen__single {
@@ -45,6 +45,7 @@
 
     .leistungen__item {
       padding: 15px 0;
+
       svg {
         position: relative;
         width: 12px;
@@ -58,7 +59,6 @@
         @include breakpoint(sm) {
           max-width: 160px;
           word-wrap:break-word;
-
         }
 
         @include breakpoint(md) {

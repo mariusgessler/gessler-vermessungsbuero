@@ -16,7 +16,11 @@
   }
 
   .logo__wrapper {
-    width: 220px;
+    width: 160px;
     margin-bottom: 25px;
+
+    @include breakpoint(sm) {
+      width: 220px;
+    }
   }
 }
