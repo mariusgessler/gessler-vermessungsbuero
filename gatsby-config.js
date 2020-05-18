@@ -27,11 +27,12 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gessler Vermessungsbüro',
-    description: 'Ingenieurbüro für Vermessung Helmut Gessler',
-    author: 'Helmut Gessler',
+    title: 'Vermessungsbüro Gessler',
+    description: 'Wir messen für Sie mit klassischen Vermessungsmethoden – von der terrestrischen Vermessung bis hin zur GPS gesteuerten Vermessung. Dadurch stellen wir sicher, dass Sie für jedes Vorhaben genau die Grundlagen erhalten, die Sie benötigen. Durch die gezielte Erfassung ihrer Vermessungsaufgaben können wir Ihnen ein zeit- und kosteneffizientes Arbeiten anbieten. Verschiedene Kommunen, das Land Baden-Württemberg, Ingenieur- und Stadtplanungsbüros und Architekten vertrauen auf unsere Arbeit seit dem Jahr 2004.',
+    author: 'Helmut Gessler Dipl. Ing. (Fh)',
     url: 'https://www.gessler-vermessung.de',
     image: '/hero2.jpg',
+    keywords: ['gessler vermessung', 'vermessungsbüro freiburg', 'ingenieurbüro für vermessung helmut gessler', 'helmut gessler', 'vermessung freiburg', 'vermessungsbuero gessler', 'katastervermessung', 'gebäudevermessung', 'ingenieursvermessung'],
   },
   pathPrefix: '/gessler-vermessungsbuero',
   plugins: [
